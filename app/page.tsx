@@ -2,7 +2,6 @@ import Image from "next/image";
 import Header from "../components/Header";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/ui/contact-form";
-import { ArrowRight, ChartCandlestick, CircleDollarSign, Globe, ShieldCheck } from "lucide-react";
 import FeaturesSection from "@/components/features-section";
 import HeroSection from "@/components/hero-section";
 import HowItWorks from "@/components/howitworks-section";
