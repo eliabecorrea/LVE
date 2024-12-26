@@ -3,12 +3,9 @@
 import Menu from "./Menu"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./mode-toggle"
-import { useEffect, useState } from "react"
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [headerClass, setHeaderClass] = useState('bg-transparent');
   const { scrollY } = useScroll()
 
   const headerBackground = useTransform(
