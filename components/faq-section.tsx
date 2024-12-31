@@ -34,7 +34,7 @@ export default function FAQSection() {
     <section className="w-full py-24 bg-background flex items-center justify-center rounded-lg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="title-font font-bold tracking-tighter">
             Frequently Asked Questions About Our Services
           </h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">

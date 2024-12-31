@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +15,23 @@ body {
 
 @layer base {
   :root {
-    --background: 152 81% 96%;
+    --base-50: 180 12% 89%;
+    --base-100: 180 12% 78%;
+    --base-200: 180 12% 66%;
+    --base-300: 180 12% 55%;
+    --base-400: 180 12% 44%;
+    --base-500: 180 12% 33%;
+    --base-600: 180 12% 28%;
+    --base-700: 180 12% 22%;
+    --base-800: 180 13% 17%;
+    --base-900: 180 12% 11%;
+    --base-950: 180 14% 5%;
+    --base-default: 180 12% 33%;
+    --base-light: 180 12% 66%;
+    --base-lighter: 180 12% 89%;
+    --base-dark: 180 13% 17%;
+    --base-darker: 180 14% 5%;
+    --background: var(--base-darker);
     --foreground: 80 14% 5%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -39,27 +56,11 @@ body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: .5rem;
-    --base-50: 180 12% 89%;
-    --base-100: 180 12% 78%;
-    --base-200: 180 12% 66%;
-    --base-300: 180 12% 55%;
-    --base-400: 180 12% 44%;
-    --base-500: 180 12% 33%;
-    --base-600: 180 12% 28%;
-    --base-700: 180 12% 22%;
-    --base-800: 180 13% 17%;
-    --base-900: 180 12% 11%;
-    --base-950: 180 14% 5%;
-    --base-default: 180 12% 33%;
-    --base-light: 180 12% 66%;
-    --base-lighter: 180 12% 89%;
-    --base-dark: 180 13% 17%;
-    --base-darker: 180 14% 5%;
   }
   .dark {
-    --background: 80 14% 5%;
+    --background: var(--base-dark);
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: var(--base-dark);
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -88,7 +89,22 @@ body {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: Lora;
+}
+
+.title-font {
+  font-family: Playfair Display;
+  @apply text-4xl sm:text-5xl lg:text-6xl;
+  letter-spacing: 2px;
+}
+
+.container {
+  @media (min-width: 1440px) {
+    max-width: 100%;
   }
 }
