@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
     <section className="py-24 bg-background w-full flex items-center justify-center rounded-lg">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="font-bold tracking-tighter title-font">
             See What Our Clients Are Saying
           </h2>
           <div className="w-full max-w-5xl mx-auto mt-8">
@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
                 <div className="flex">
                   {testimonials.map((testimonial, index) => (
                     <div className="flex-[0_0_100%] min-w-0 pl-4" key={index}>
-                      <Card className="border-0 bg-card/5">
+                      <Card className="border-0 bg-card">
                         <CardContent className="flex flex-col items-center gap-4 p-6">
                           <Quote className="h-12 w-12 text-primary" />
                           <p className="text-xl md:text-2xl italic text-card-foreground">

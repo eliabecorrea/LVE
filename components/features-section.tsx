@@ -28,7 +28,7 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="relative overflow-hidden bg-primary/50 p-6 rounded-lg w-full min-h-screen flex items-center justify-center">
+    <section className="relative overflow-hidden bg-transparent p-6 rounded-lg w-full flex items-center justify-center">
       <div className="absolute inset-0" />
       <div className="container mx-auto relative">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

@@ -8,9 +8,9 @@ import {
 import Link from "next/link";
 
 
-export default function Menu() {
+export default function Navigation() {
     return (
-        <aside className="w-max-full [&_.bg-background]:!bg-transparent flex justify-center items-center">
+        <aside className="w-max-full [&_.bg-background]:!bg-transparent hidden md:flex items-center justify-center space-x-8">
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
