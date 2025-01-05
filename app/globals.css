@@ -15,6 +15,48 @@ body {
 
 @layer base {
   :root {
+    --base-50: 149 47% 96%;
+    --base-100: 149 80% 90%;
+    --base-200: 152 76% 80%;
+    --base-300: 154 73% 67%;
+    --base-400: 156 61% 52%;
+    --base-500: 158 53% 39%;
+    --base-600: 160 92% 33%;
+    --base-700: 162 94% 24%;
+    --base-800: 162 91% 20%;
+    --base-900: 163 90% 16%;
+    --base-default: 158 53% 39%;
+    --base-light: 152 76% 80%;
+    --base-lighter: 149 47% 96%;
+    --base-dark: 162 91% 20%;
+    --base-darker: 163 90% 16%;
+    --background: var(--base-lighter);
+    --foreground: 80 14% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: var(--base-default);
+    --primary-foreground: 152 81% 96%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 160 84% 39%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: var(--base-600);
+    --accent-foreground: var(--base-lighter);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: .5rem;
+  }
+  .dark {
     --base-50: 180 12% 89%;
     --base-100: 180 12% 78%;
     --base-200: 180 12% 66%;
@@ -32,33 +74,6 @@ body {
     --base-dark: 180 13% 17%;
     --base-darker: 180 14% 5%;
     --background: var(--base-darker);
-    --foreground: 80 14% 5%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 160 84% 39%;
-    --primary-foreground: 152 81% 96%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 160 84% 39%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 160 84% 39%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: .5rem;
-  }
-  .dark {
-    --background: var(--base-dark);
     --foreground: 0 0% 98%;
     --card: var(--base-dark);
     --card-foreground: 0 0% 98%;

@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Navigation() {
     return (
-        <aside className="w-max-full [&_.bg-background]:!bg-transparent hidden md:flex items-center justify-center space-x-8">
+        <aside className="w-max-full [&_.bg-background]:!bg-transparent flex items-center justify-center space-x-8">
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
@@ -28,7 +28,7 @@ export default function Navigation() {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/" legacyBehavior passHref>
+                        <Link href="/#HowItWorks" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 How it works
                             </NavigationMenuLink>

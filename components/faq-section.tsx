@@ -31,11 +31,12 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="w-full py-24 bg-background flex items-center justify-center rounded-lg">
+    <section id="faq" className="w-full py-24 bg-background flex items-center justify-center rounded-lg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="title-font font-bold tracking-tighter">
-            Frequently Asked Questions About Our Services
+            <span>Frequently Asked Questions</span>
+            <div>About Our Services</div>
           </h2>
           <p className="max-w-[700px] text-muted-foreground md:text-xl">
             Find answers to common questions about investing with us

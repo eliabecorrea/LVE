@@ -40,12 +40,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
+                <Link href="/#about" className="hover:text-white transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/how-it-works" className="hover:text-white transition-colors">
+                <Link href="/#how-it-works" className="hover:text-white transition-colors">
                   How It Works
                 </Link>
               </li>
@@ -55,7 +55,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Resources</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link href="/faq" className="hover:text-white transition-colors">
+                <Link href="/#faq" className="hover:text-white transition-colors">
                   FAQ
                 </Link>
               </li>
@@ -83,7 +83,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} Global Wealth Solutions. All rights reserved.
+          © {new Date().getFullYear()} LVE Wealth Solutions. All rights reserved.
         </div>
       </div>
     </footer>
