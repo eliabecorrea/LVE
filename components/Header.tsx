@@ -38,33 +38,37 @@ export default function Header() {
     >
       <div className="grid grid-cols-3 h-full w-full px-4 lg:px-6 container">
         <div className="flex items-center">
-          <span className="text-3xl font-bold text-white">LVE</span>
+          <span className="text-3xl font-bold text-foreground">LVE</span>
         </div>
         
-        <Navigation />
+        <div className="hidden md:flex items-center justify-center">
+          <Navigation />
+        </div>
         
-        <div className="flex items-center justify-end gap-4">
+        <div className="flex items-center justify-end gap-4 col-start-3">
           <ModeToggle />
           <Button 
             variant="default" 
             className="hidden md:inline-flex bg-emerald-500 hover:bg-emerald-600 text-white"
           >
-            Contact
+            Become an investor
           </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-white">
+              <Button variant="outline" size="icon" className="rounded-full md:hidden">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-[rgb(28,48,44)]">
-              <Navigation />
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-popover">
+              <div className="[&_ul]:w-full [&_ul]:flex-col [&_ul]:items-start [&_nav]:w-full [&_nav>div]:w-full [&_nav]:max-w-full">
+                <Navigation />
+              </div>
               <Button 
                 variant="default" 
                 className="mt-6 w-full bg-emerald-500 hover:bg-emerald-600 text-white"
               >
-                Contact
+                Become an investor
               </Button>
             </SheetContent>
           </Sheet>

@@ -34,11 +34,11 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="w-full py-24 bg-black min-h-screen flex items-center justify-center rounded-lg">
+    <section id="HowItWorks" className="w-full py-24 bg-base-light dark:bg-base-dark min-h-screen flex items-center justify-center rounded-lg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <motion.h2 
-            className="font-bold tracking-tighter text-white title-font"
+            className="font-bold tracking-tighter text-foreground title-font"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function HowItWorks() {
             How it Works
           </motion.h2>
           <motion.p 
-            className="max-w-[900px] text-zinc-400 md:text-xl/relaxed lg:text-2xl/relaxed"
+            className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-2xl/relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -67,9 +67,9 @@ export default function HowItWorks() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <Card className="relative h-full bg-zinc-900 border-zinc-800 text-white">
+                <Card className="relative h-full bg-card border-none shadow-none text-foreground">
                   <div className="absolute -top-5 left-4">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground">
                       <span className="text-lg font-bold">{step.number}</span>
                     </div>
                   </div>
