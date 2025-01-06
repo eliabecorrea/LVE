@@ -29,7 +29,7 @@ export default function PrincipalSection() {
                     </Button>
                 </div>
                 <div className="bg-white p-6 lg:p-8 w-full max-w-[500px] rounded-lg shadow-xl flex items-center flex-wrap justify-center">
-                    <h2 className="text-2xl font-bold text-foreground mb-6">
+                    <h2 className="text-2xl font-bold text-base-950 mb-6">
                         Start your journey to financial freedom
                     </h2>
                     <ContactForm />

@@ -39,7 +39,7 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="group relative rounded-2xl p-6 backdrop-blur-sm bg-card/50 hover:bg-card/40 transition-colors duration-300"
+              className="group relative rounded-2xl p-6 backdrop-blur-sm bg-card hover:bg-card/40 transition-colors duration-300"
             >
               <div className="mb-4 inline-block rounded-xl bg-base-500/10 p-3">
                 <feature.icon className="h-6 w-6 text-emerald-500" />
