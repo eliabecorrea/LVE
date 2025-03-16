@@ -7,6 +7,7 @@ import FAQSection from "@/components/faq-section";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/Footer";
 import PrincipalSection from "@/components/principal-section";
+import AboutUs from "@/components/about-us";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <FeaturesSection />
         <HowItWorks />
+        <AboutUs />
         <Testimonials />
         <FAQSection />
         <FinalCTA />

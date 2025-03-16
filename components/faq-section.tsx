@@ -8,8 +8,8 @@ import {
 
 const faqs = [
   {
-    question: "How does investing in dollars work?",
-    answer: "When you invest in dollars, you're converting your local currency into USD and investing in dollar-denominated assets. This helps protect your wealth from local currency fluctuations and provides access to international markets.",
+    question: "How does investing in LVE work?",
+    answer: "If your local currency is volatile or prone to depreciation, investing in USD fixed-income funds can protect your purchasing power, especially in volatile markets. With a profit rate greater than traditional bonds.",
     icon: DollarSign,
   },
   {

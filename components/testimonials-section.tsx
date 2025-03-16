@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
     <section className="py-24 bg-background w-full flex items-center justify-center rounded-lg">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl title-font">
             See What Our Clients Are Saying
           </h2>
           <div className="w-full max-w-5xl mx-auto mt-8">

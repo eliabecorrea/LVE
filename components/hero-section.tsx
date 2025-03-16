@@ -61,7 +61,7 @@ export default function HeroSection() {
               className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground"
             >
               The most widely used strong currency in the world for global transactions.
-              Diversifying your wealth in dollars is a smart strategy to protect your
+              Diversifying your wealth in LVE is a smart strategy to protect your
               capital and secure your financial freedom.
             </motion.p>
 
