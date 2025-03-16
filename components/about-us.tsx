@@ -31,7 +31,7 @@ export default function AboutUs() {
 
             <p className="text-lg leading-relaxed mb-6">
               Three entrepreneurs — a globetrotting investor stranded by capital controls, a tech visionary tired of
-              geographic arbitrage, and a wealth strategist disillusioned by "localized" portfolios — united by common
+              geographic arbitrage, and a wealth strategist disillusioned by &quot;localized&quot; portfolios — united by common
               values. Their shared frustration? The world had become interconnected, but wealth remained trapped by
               borders, bureaucracy, and bias.
             </p>
