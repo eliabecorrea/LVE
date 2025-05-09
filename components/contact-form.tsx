@@ -72,6 +72,7 @@ export default function ContactForm() {
         description: "Failed to send your message. Please try again.",
         variant: "destructive",
       })
+      console.log(error)
     } finally {
       setIsLoading(false)
     }
