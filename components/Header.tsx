@@ -10,18 +10,6 @@ import Navigation from "./Navigation"
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const { scrollY } = useScroll()
-
-  /*const headerBackground = useTransform(
-    scrollY,
-    [0, 100],
-    ['rgb(28, 48, 44)', 'rgb(28, 48, 44, 0.9)']
-  )
-
-  const headerWidth = useTransform(
-    scrollY,
-    [0, 100],
-    ['100%', 'calc(100vw - (100vw - 100%))']
-  )*/
   
   const headerBackdropBlur = useTransform(
     scrollY,
@@ -34,7 +22,7 @@ export default function Header() {
       style={{
         backdropFilter: headerBackdropBlur,
       }}
-      className="sticky top-0 min-h-16 backdrop-blur-sm flex items-center justify-center z-30 mx-auto transition-all duration-300 rounded-b-lg rounded-t-0 w-full"
+      className="sticky top-0 min-h-16 backdrop-blur-sm flex items-center justify-center z-30 mx-auto transition-all duration-300 rounded-b-lg rounded-t-0 w-full hover:bg-background"
     >
       <div className="grid grid-cols-3 h-full w-full px-4 lg:px-6 container">
         <div className="flex items-center">

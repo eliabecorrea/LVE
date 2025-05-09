@@ -3,12 +3,12 @@ import Link from "next/link"
 
 export default function AboutUs() {
   return (
-    <section id="AboutUs" className="w-full text-white py-20">
+    <section id="AboutUs" className="w-full py-20">
       <div className="container px-4 mx-auto">
 
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight title-font title-font">
-            About <span className="text-emerald-400">Us</span>
+            <span>About</span> <span className="text-emerald-400">Us</span>
           </h2>
         </div>
 
