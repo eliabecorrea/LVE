@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
+import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -25,38 +27,71 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, {
-      message: "Bio must be at least 10 characters.",
+      message: "Message must be at least 10 characters.",
     })
     .max(160, {
-      message: "Bio must not be longer than 30 characters.",
+      message: "Message must not be longer than 160 characters.",
     }),
 })
 
 export default function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false)
+  const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      email: "",
+      message: "",
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      toast({
+        title: "Success",
+        description: "Your message has been sent!",
+      })
+      form.reset()
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-2 gap-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-2 gap-x-4 w-full">
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+            <FormItem>
+              <FormControl>
+                <Input placeholder="Name" {...field} />
+              </FormControl>
+              <div className="h-5">
+                <FormMessage className="text-xs text-red-500" />
+              </div>
+            </FormItem>
           )}
         />
         <FormField
@@ -65,9 +100,11 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input  placeholder="your@email.com" type="email" {...field} />
+                <Input placeholder="your@email.com" type="email" {...field} />
               </FormControl>
-              <FormMessage />
+              <div className="h-5">
+                <FormMessage className="text-xs text-red-500" />
+              </div>
             </FormItem>
           )}
         />
@@ -79,10 +116,15 @@ export default function ContactForm() {
               <FormControl>
                 <Textarea placeholder="Type your message" {...field} />
               </FormControl>
+              <div className="h-5">
+                <FormMessage className="text-xs text-red-500" />
+              </div>
             </FormItem>
           )}
         />
-        <Button className="col-span-full" type="submit">Become an investor</Button>
+        <Button className="col-span-full" type="submit" disabled={isLoading}>
+          {isLoading ? "Sending..." : "Become an investor"}
+        </Button>
       </form>
     </Form>
   )

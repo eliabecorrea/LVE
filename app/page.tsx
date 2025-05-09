@@ -8,6 +8,7 @@ import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/Footer";
 import PrincipalSection from "@/components/principal-section";
 import AboutUs from "@/components/about-us";
+import { Toaster } from "@/components/ui/toaster";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <FAQSection />
         <FinalCTA />
       </main>
+      <Toaster/>
       <Footer />
     </div>
   );
