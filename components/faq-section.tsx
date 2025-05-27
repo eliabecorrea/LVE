@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     question: "How does investing in LVE work?",
-    answer: "If your local currency is volatile or prone to depreciation, investing in USD fixed-income funds can protect your purchasing power, especially in volatile markets. With a profit rate greater than traditional bonds.",
+    answer: "If your local currency is volatile or prone to depreciation, investing in USD funds can protect your purchasing power, especially in volatile markets. With a profit rate greater than traditional bonds.",
     icon: DollarSign,
   },
   {

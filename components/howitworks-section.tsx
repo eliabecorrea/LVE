@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from "framer-motion"
 import { ArrowRight, ClipboardCheck, MessageSquare, ShieldCheck } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -10,6 +11,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import ContactForm from "@/components/contact-form"
 
 const steps = [
   {
@@ -27,17 +37,18 @@ const steps = [
   {
     number: 3,
     title: "Invest Securely",
-    description: "Your assets are allocated in strong USD investments, with potential yields ranging from 6-12% annually.",
+    description: "Your assets are allocated in strong USD investments, with potential yields ranging from 6-8% annually.",
     icon: ShieldCheck,
   },
 ]
 
 export default function HowItWorks() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
   return (
     <section id="HowItWorks" className="w-full py-24 bg-base-light dark:bg-base-dark min-h-screen flex items-center justify-center rounded-lg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <motion.h2 
+          <motion.h2
             className="font-bold tracking-tighter text-foreground title-font"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +57,7 @@ export default function HowItWorks() {
           >
             How it Works
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="max-w-[900px] text-foreground md:text-xl/relaxed lg:text-2xl/relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,23 +100,33 @@ export default function HowItWorks() {
             )
           })}
         </div>
-        <motion.div 
+        <motion.div
           className="flex justify-center mt-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <Button 
-            size="lg" 
-            className="group bg-primary hover:bg-primary/90 text-white"
-          >
-            Your Legacy Deserves a Fortress
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+            <DialogTrigger asChild>
+              <Button size="lg" className="group">
+                 Start your journey to financial freedom
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Contact an Expert</DialogTitle>
+                <DialogDescription>
+                  Fill out the form below and one of our experts will get back to you shortly.
+                </DialogDescription>
+              </DialogHeader>
+              <ContactForm />
+            </DialogContent>
+          </Dialog>
         </motion.div>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }
 
